@@ -64,7 +64,15 @@ function App() {
         max={100}
         value={length}
          className='cursor-pointer'
-         onChange={(e) => {setLength(e.target.value)}}
+         onChange={(e) => {setLength(e.target.value)}}  /** This is commonly used in React.js to handle changes in an input field, such as a text input or a textarea. Here's a breakdown of the code:
+
+onChange: This is an event handler attribute in React that specifies a function to be called when the value of an input element changes.
+
+(e) => {...}: This is an arrow function that takes an event object (e) as its parameter. The event object contains information about the event, such as the target element (in this case, the input field).
+
+{setLength(e.target.value)}: Inside the arrow function, it calls the setLength function, presumably a state-setting function. It sets the value of the length state (or variable) to the new value of the input field, which is accessed through e.target.value.
+
+So, in summary, whenever the content of the input field changes, the setLength function will be called with the new value of the input field. This is a common pattern in React for handling user input and updating state accordingly.**/
           />
           <label>Length: {length}</label>
       </div>
